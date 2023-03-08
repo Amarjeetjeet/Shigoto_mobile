@@ -59,6 +59,33 @@ class AppTheme {
     accentColor: darkAccentColor,
     backgroundColor: darkBackgroundColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
+      inputDecorationTheme: InputDecorationTheme(
+          hintStyle: AppStyle.txtDmSans12W400primaryTextColorA60,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderSide:
+            BorderSide(color: Colors.white, width: 0.0),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderSide:
+            BorderSide(color: Colors.white, width: 0.0),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderSide:
+            BorderSide(color: Colors.white, width: 0.0),
+          ),
+          border: OutlineInputBorder(
+              borderSide:
+              BorderSide(color: Colors.white, width: 0.0),
+              borderRadius:
+              BorderRadius.all(Radius.circular(10.0))),
+          fillColor: Colors.white,
+          filled: true,
+          contentPadding:
+          EdgeInsets.symmetric(vertical: 16, horizontal: 16)
+      )
   );
 
   static Brightness get currentSystemBrightness =>
