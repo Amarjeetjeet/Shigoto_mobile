@@ -6,9 +6,10 @@ import '../../constants/app_style.dart';
 class SecondaryCustomButton extends StatelessWidget {
   final String btnName;
   final VoidCallback? onTap;
+  final bool allowBlue;
 
   const SecondaryCustomButton({
-    super.key,required this.btnName, required this.onTap,
+    super.key,required this.btnName, required this.onTap, this.allowBlue = false
   });
 
   @override
@@ -27,7 +28,7 @@ class SecondaryCustomButton extends StatelessWidget {
         MaterialStateProperty.all(ColorConstants.offPurpleColor),
         shadowColor: MaterialStateProperty.all(Colors.transparent),
       ),
-      child: Text(btnName , style: AppStyle.txtDmSans14W700whiteColor,),
+      child: Text(btnName , style : allowBlue ?  AppStyle.txtDmSans12W400primaryTextColor : AppStyle.txtDmSans14W700whiteColor),
     );
   }
 }

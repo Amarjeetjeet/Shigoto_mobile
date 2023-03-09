@@ -41,6 +41,31 @@ class AppStyle {
       height: 1.6
   );
 
+  static TextStyle txtOpenSans12W400primaryTextColor = TextStyle(
+      color: ColorConstants.primaryTextColor,
+      fontSize: 12,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.w400,
+      height: 1.6
+  );
+
+
+  static TextStyle txtOpenSans16W600primaryTextColor = TextStyle(
+      color: ColorConstants.primaryTextColor,
+      fontSize: 16,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.w600,
+      height: 1.6
+  );
+
+  static TextStyle txtOpenSans14W600primaryTextColor = TextStyle(
+      color: ColorConstants.primaryTextColor,
+      fontSize: 14,
+      fontFamily: 'Open Sans',
+      fontWeight: FontWeight.w600,
+      height: 1.6
+  );
+
   static TextStyle txtDmSans12W400primaryTextColor = TextStyle(
       color: ColorConstants.primaryTextColor,
       fontSize: 12,
@@ -77,6 +102,13 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
+  static TextStyle txtDmSans16W400primaryTextColor = TextStyle(
+    color: ColorConstants.primaryTextColor,
+    fontSize: 16,
+    fontFamily: 'DM Sans',
+    fontWeight: FontWeight.w400,
+  );
+
   static TextStyle txtDmSans12W400primaryTextColorA60 = TextStyle(
       color: ColorConstants.primaryTextColor.withOpacity(0.6),
       fontSize: 12,
@@ -103,6 +135,14 @@ class AppStyle {
 
   static TextStyle txtDmSans16W700blackColor = TextStyle(
       color: Colors.black,
+      fontSize: 16,
+      fontFamily: 'DM Sans',
+      fontWeight: FontWeight.w700,
+      height: 1.9
+  );
+
+  static TextStyle txtDmSans16W700primaryTextColor= TextStyle(
+      color: ColorConstants.primaryTextColor,
       fontSize: 16,
       fontFamily: 'DM Sans',
       fontWeight: FontWeight.w700,

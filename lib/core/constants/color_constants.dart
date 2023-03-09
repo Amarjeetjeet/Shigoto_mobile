@@ -15,4 +15,5 @@ class ColorConstants{
   static Color cbc9dColor = const Color(0xFFCBC9D4).withOpacity(0.20);
   static Color ffd6adColor = const Color(0xFFFFD6AD);
   static Color ff6b2cColor = const Color(0xFFFF6B2C);
+  static Color f3f2f2Color = const Color(0xFFF3F2F2);
 }

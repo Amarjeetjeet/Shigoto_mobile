@@ -4,6 +4,7 @@ import 'package:shigoto/presentation/dashboard/home_screen.dart';
 import 'package:shigoto/presentation/forgot_password/check_your_email.dart';
 import 'package:shigoto/presentation/forgot_password/forgot_password.dart';
 import 'package:shigoto/presentation/forgot_password/successful_screen.dart';
+import 'package:shigoto/presentation/job_description/job_description_screen.dart';
 import 'package:shigoto/presentation/login_screen/login_screen.dart';
 import 'package:shigoto/presentation/signup/sign_up.dart';
 
@@ -21,6 +22,7 @@ class AppRouter {
   static const String successfulScreen = '/successfulScreen';
   static const String home = '/home';
   static const String dashboard = '/dashboard';
+  static const String jobDescription = '/jobDescription';
 
   const AppRouter._();
 
@@ -61,6 +63,10 @@ class AppRouter {
       case dashboard:
         return MaterialPageRoute(
           builder: (_) => const DashboardScreen(),
+        );
+      case jobDescription:
+        return MaterialPageRoute(
+          builder: (_) => const JobDescriptionScreen(),
         );
       default:
         throw const RouteException('Route not found!');
