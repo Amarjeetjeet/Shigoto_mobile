@@ -49,7 +49,13 @@ class AppTheme {
       filled: true,
         contentPadding:
         EdgeInsets.symmetric(vertical: 16, horizontal: 16)
-    )
+    ),
+      appBarTheme: AppBarTheme(
+          brightness: Brightness.light,
+          iconTheme: IconThemeData(
+              color: Colors.black
+          )
+      )
   );
 
   static final darkTheme = ThemeData(

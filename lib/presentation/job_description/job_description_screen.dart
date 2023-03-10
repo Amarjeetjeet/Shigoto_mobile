@@ -4,6 +4,11 @@ import 'package:shigoto/core/constants/color_constants.dart';
 import 'package:shigoto/core/constants/image_constants.dart';
 import 'package:shigoto/core/custom_widgets/buttons/custom_primary_Btn.dart';
 import 'package:shigoto/core/custom_widgets/buttons/custom_secondary_color.dart';
+import 'package:shigoto/presentation/job_description/widgets/bullet_text.dart';
+import 'package:shigoto/presentation/job_description/widgets/company_logo_designations.dart';
+import 'package:shigoto/presentation/job_description/widgets/heading_details.dart';
+import 'package:shigoto/presentation/job_description/widgets/heading_title.dart';
+import 'package:shigoto/router/app_router.dart';
 
 class JobDescriptionScreen extends StatelessWidget {
   const JobDescriptionScreen({super.key});
@@ -13,12 +18,32 @@ class JobDescriptionScreen extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.only(left: 53.0 ,right: 53.0 , bottom: 28),
-            child: PrimaryCustomButton(
-        btnName: 'Apply Now',
-        onTap: () {},
-      ),
-          )),
+        padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 28),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 4,
+              child: SecondaryCustomButton(
+                btnName: 'Company details',
+                onTap: () {
+                  Navigator.pushNamed(context, AppRouter.companyDescription);
+                },
+                allowBlue: true,
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              flex: 6,
+              child: PrimaryCustomButton(
+                btnName: 'Apply Now',
+                onTap: () {},
+              ),
+            ),
+          ],
+        ),
+      )),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -27,51 +52,7 @@ class JobDescriptionScreen extends StatelessWidget {
               SizedBox(
                 height: 80,
               ),
-              Container(
-                color: ColorConstants.f3f2f2Color,
-                height: 124,
-                width: MediaQuery.of(context).size.width,
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    Positioned(
-                      top: -50,
-                      left: 0,
-                      right: 0,
-                      child: CircleAvatar(
-                        radius: 40,
-                        backgroundColor: ColorConstants.skyBlueColor,
-                        child:
-                            Image.asset(ImageConstants.googleLogo, height: 35),
-                      ),
-                    ),
-                    Positioned(
-                        bottom: 45,
-                        left: 0,
-                        right: 0,
-                        child: Text(
-                          "UI/UX Designer",
-                          style: AppStyle.txtDmSans16W700primaryTextColor,
-                          textAlign: TextAlign.center,
-                        )),
-                    Positioned(
-                      bottom: 5,
-                      left: 0,
-                      right: 0,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          buildText("Google"),
-                          buildBulletText(),
-                          buildText("California"),
-                          buildBulletText(),
-                          buildText("1 day ago"),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              CompanyLogoDetails(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Column(
@@ -101,7 +82,8 @@ class JobDescriptionScreen extends StatelessWidget {
                       "Requirements",
                       style: AppStyle.txtOpenSans14W600primaryTextColor,
                     ),
-                    buildRow("Sed ut perspiciatis unde omnis iste natus error sit."),
+                    buildRow(
+                        "Sed ut perspiciatis unde omnis iste natus error sit."),
                     buildSizedBox(15),
                     buildRow(
                         "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur & adipisci velit."),
@@ -112,24 +94,19 @@ class JobDescriptionScreen extends StatelessWidget {
                     buildRow(
                         "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur"),
                     buildSizedBox(25),
-                    Text(
-                      "Location",
-                      style: AppStyle.txtOpenSans14W600primaryTextColor,
+                    HeadingTitle(
+                      title: 'Location',
                     ),
                     buildSizedBox(16),
-                    Text(
-                      "Overlook Avenue, Belleville, NJ, USA",
-                      style: AppStyle.txtDmSans12W400primaryTextColor,
-                    ),
+                    HeadingDetails(info: "Overlook Avenue, Belleville, NJ, USA",),
                     buildSizedBox(16),
                     Container(
                       height: 151,
                       child: Placeholder(),
                     ),
                     buildSizedBox(20),
-                    Text(
-                      "Informations",
-                      style: AppStyle.txtOpenSans14W600primaryTextColor,
+                    HeadingTitle(
+                      title: 'Informations',
                     ),
                     buildSizedBox(16),
                     buildColumn("Bachelor’s Degree", "Bachelor’s Degree"),
@@ -138,9 +115,8 @@ class JobDescriptionScreen extends StatelessWidget {
                     buildColumn("Job Type", "Full-Time"),
                     buildColumn("Specialization", "Design"),
                     buildSizedBox(15),
-                    Text(
-                      "Facilities and Others",
-                      style: AppStyle.txtOpenSans14W600primaryTextColor,
+                    HeadingTitle(
+                      title: 'Facilities and Others',
                     ),
                     buildSizedBox(5),
                     buildRow("Medical"),
@@ -160,7 +136,6 @@ class JobDescriptionScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
             ],
           ),
         ),
@@ -168,20 +143,20 @@ class JobDescriptionScreen extends StatelessWidget {
     );
   }
 
-  SizedBox buildSizedBox(double height) => SizedBox(height: height,);
+  SizedBox buildSizedBox(double height) => SizedBox(
+        height: height,
+      );
 
   Column buildColumn(String title, String info) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          title,
-          style: AppStyle.txtOpenSans14W600primaryTextColor,
+        HeadingTitle(
+          title: title,
         ),
         buildSizedBox(5),
-        Text(
-          info,
-          style: AppStyle.txtDmSans12W400primaryTextColor,
+        HeadingDetails(
+          info: info,
         ),
         buildSizedBox(10),
         Divider(),
@@ -192,24 +167,13 @@ class JobDescriptionScreen extends StatelessWidget {
   Row buildRow(String text) {
     return Row(
       children: [
-        buildBulletText(size: 24),
+        BulletText(size: 24),
         Expanded(
-          child: Text(
-            text,
-            style: AppStyle.txtDmSans12W400primaryTextColor,
+          child: HeadingDetails(
+            info: text,
           ),
         ),
       ],
     );
   }
-
-  Text buildBulletText({double size = 34}) => Text(
-        " \u2022 ",
-        style: TextStyle(fontSize: size),
-      );
-
-  Text buildText(String text) => Text(
-        text,
-        style: AppStyle.txtDmSans16W400primaryTextColor,
-      );
 }
