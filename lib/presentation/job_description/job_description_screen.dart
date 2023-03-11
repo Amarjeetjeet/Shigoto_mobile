@@ -38,7 +38,11 @@ class JobDescriptionScreen extends StatelessWidget {
               flex: 6,
               child: PrimaryCustomButton(
                 btnName: 'Apply Now',
-                onTap: () {},
+                onTap: () {
+
+                  Navigator.pushNamed(context, AppRouter.uploadCv);
+
+                },
               ),
             ),
           ],

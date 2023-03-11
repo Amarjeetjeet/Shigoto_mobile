@@ -6,10 +6,12 @@ import 'package:shigoto/presentation/forgot_password/forgot_password.dart';
 import 'package:shigoto/presentation/forgot_password/successful_screen.dart';
 import 'package:shigoto/presentation/job_description/company_description_screen.dart';
 import 'package:shigoto/presentation/job_description/job_description_screen.dart';
+import 'package:shigoto/presentation/job_description/upload_cv.dart';
 import 'package:shigoto/presentation/login_screen/login_screen.dart';
 import 'package:shigoto/presentation/signup/sign_up.dart';
 
 import '../../core/exceptions/route_exception.dart';
+import '../presentation/job_description/successful.dart';
 import '../presentation/splash_screen/splash_screen.dart';
 import '../presentation/splash_screen/splash_screen_two.dart';
 
@@ -25,6 +27,8 @@ class AppRouter {
   static const String dashboard = '/dashboard';
   static const String jobDescription = '/jobDescription';
   static const String companyDescription = '/companyDescription';
+  static const String uploadCv = '/uploadCv';
+  static const String successFulJob = '/successFulJob';
 
   const AppRouter._();
 
@@ -73,6 +77,14 @@ class AppRouter {
       case companyDescription:
         return MaterialPageRoute(
           builder: (_) => const CompanyDescriptionScreen(),
+        );
+      case uploadCv:
+        return MaterialPageRoute(
+          builder: (_) => const UploadCv(),
+        );
+        case successFulJob:
+        return MaterialPageRoute(
+          builder: (_) => const SuccessfulJobScreen(),
         );
       default:
         throw const RouteException('Route not found!');
