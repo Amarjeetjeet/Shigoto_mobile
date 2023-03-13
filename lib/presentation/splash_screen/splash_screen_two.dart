@@ -28,7 +28,7 @@ class SplashScreenTwo extends StatelessWidget {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 32, top: 20),
-            child: Text("Jobspot",
+            child: Text("Shigoto",
                 style: TextStyle(
                     fontSize: 26,
                     color: Colors.black,
@@ -58,11 +58,15 @@ class SplashScreenTwo extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              buildTextAlign(
-                  "Explore all the most exciting job roles based on your interest and study major.",
-                  Colors.black,
-                  14,
-                  FontWeight.w400),
+              Text(
+                "Explore all the most exciting job roles based on your interest and study major.",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                    fontSize: 14,
+                    height: 1.4),
+              )
+
             ],
           ),
         ),

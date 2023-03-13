@@ -16,75 +16,77 @@ class UploadCv extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: SafeArea(child: Padding(
-        padding: const EdgeInsets.all(29.0),
+        padding:  const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 08),
         child: PrimaryCustomButton(btnName: 'Apply Now', onTap: () {
           Navigator.pushNamed(context, AppRouter.successfulScreen);
         },),
       )),
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 80,
-            ),
-            CompanyLogoDetails(),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 10,
-                  ),
-                  HeadingTitle(title: "Upload CV"),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  HeadingDetails(info: "Add your CV/Resume to apply for a job"),
-                  SizedBox(
-                    height: 20,
-                  ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 80,
+              ),
+              CompanyLogoDetails(),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    HeadingTitle(title: "Upload CV"),
+                    SizedBox(
+                      height: 11,
+                    ),
+                    HeadingDetails(info: "Add your CV/Resume to apply for a job"),
+                    SizedBox(
+                      height: 20,
+                    ),
 
-                  DottedBorder(
-                    color: ColorConstants.c9d97b5Color,
-                    strokeWidth: 1,
-                    padding: EdgeInsets.all(6),
-                    borderType: BorderType.RRect,
-                    radius: Radius.circular(15),
-                    dashPattern: [5, 3, 2, 3],
-                    child: Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.drive_folder_upload ,color: ColorConstants.secondaryTextColor,size: 37,),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Text("Upload CV/Resume" ,style: AppStyle.txtDmSans14W400primaryTextColor,)
-                        ],
+                    DottedBorder(
+                      color: ColorConstants.c9d97b5Color,
+                      strokeWidth: 1,
+                      padding: EdgeInsets.all(6),
+                      borderType: BorderType.RRect,
+                      radius: Radius.circular(15),
+                      dashPattern: [5, 3, 2, 3],
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.drive_folder_upload ,color: ColorConstants.secondaryTextColor,size: 37,),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Text("Upload CV/Resume" ,style: AppStyle.txtDmSans14W400primaryTextColor,)
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  HeadingTitle(title: "Information"),
-                  SizedBox(
-                    height: 16,
-                  ),
-
-                  TextFormField(
-                    maxLines: 10,
-                    decoration: InputDecoration(
-                      hintText: "Explain why you are the right person for this job",
-                      hintStyle: AppStyle.txtDmSans12W400AAA6B9TextColor
+                    SizedBox(
+                      height: 30,
                     ),
-                  )
-                ],
-              ),
-            )
-          ],
+                    HeadingTitle(title: "Information"),
+                    SizedBox(
+                      height: 16,
+                    ),
+
+                    TextFormField(
+                      maxLines: 10,
+                      decoration: InputDecoration(
+                        hintText: "Explain why you are the right person for this job",
+                        hintStyle: AppStyle.txtDmSans12W400AAA6B9TextColor
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
