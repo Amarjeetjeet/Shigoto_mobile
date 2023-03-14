@@ -74,6 +74,14 @@ class AppStyle {
       height: 1.5
   );
 
+  static TextStyle txtDmSans12W700primaryTextColor = TextStyle(
+      color: ColorConstants.primaryTextColor,
+      fontSize: 12,
+      fontFamily: 'DM Sans',
+      fontWeight: FontWeight.w700,
+      height: 1.5
+  );
+
   static TextStyle txtDmSans14W700whiteColor = const TextStyle(
       color: Colors.white,
       fontSize: 14,
@@ -127,6 +135,14 @@ class AppStyle {
 
   static TextStyle txtDmSans10W400primaryTextColor = TextStyle(
       color: ColorConstants.secondaryTextColor,
+      fontSize: 10,
+      fontFamily: 'DM Sans',
+      fontWeight: FontWeight.w400,
+      height: 1.9
+  );
+
+  static TextStyle txtDmSans10W400aaa6B9Color = TextStyle(
+      color: ColorConstants.aaa6B9Color,
       fontSize: 10,
       fontFamily: 'DM Sans',
       fontWeight: FontWeight.w400,

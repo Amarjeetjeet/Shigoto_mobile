@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shigoto/core/constants/color_constants.dart';
 import 'package:shigoto/presentation/dashboard/home_screen.dart';
 
+import '../feed/Feed_screen.dart';
+
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
@@ -15,10 +17,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    FeedScreen(),
     Text(
       'Index 2: School',
       style: optionStyle,
