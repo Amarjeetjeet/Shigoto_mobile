@@ -7,6 +7,7 @@ class ColorConstants{
   static Color secondaryTextColor = const Color(0xFF524B6B);
   static Color e6e1ffColor = const Color(0xFFE6E1FF);
   static Color aaa6B9Color = const Color(0xFFAAA6B9);
+  static Color aaa60B9Color = const Color(0xFFAAA0B9);
   static Color a49EB5Color = const Color(0xFFA49EB5);
   static Color offWhiteColor = const Color(0xFFE5E5E5);
   static Color offPurpleColor = const Color(0xFFD6CDFE);

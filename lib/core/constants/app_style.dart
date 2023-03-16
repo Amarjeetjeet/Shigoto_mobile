@@ -16,6 +16,12 @@ class AppStyle {
     fontWeight: FontWeight.w700,
   );
 
+  static TextStyle txtDmSans16W600 = TextStyle(
+    fontSize: 16,
+    fontFamily: 'DM Sans',
+    fontWeight: FontWeight.w400,
+  );
+
   static TextStyle txtDmSans12W400secondaryTextColor = TextStyle(
     color: ColorConstants.secondaryTextColor,
     fontSize: 12,
@@ -176,6 +182,14 @@ class AppStyle {
   static TextStyle txtDmSans12W400AAA6B9TextColor = TextStyle(
       color: ColorConstants.aaa6B9Color,
       fontSize: 12,
+      fontFamily: 'DM Sans',
+      fontWeight: FontWeight.w400,
+      height: 1.4
+  );
+
+  static TextStyle txtDmSans14W600AAA60B9TextColor = TextStyle(
+      color: ColorConstants.aaa60B9Color,
+      fontSize: 14,
       fontFamily: 'DM Sans',
       fontWeight: FontWeight.w400,
       height: 1.4
