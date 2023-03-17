@@ -9,10 +9,10 @@ class AppTheme {
   static Color lightAccentColor = Colors.blueGrey.shade200;
   static Color lightParticlesColor = const Color(0x44948282);
 
-  static Color darkBackgroundColor = const Color(0xFF1A2127);
-  static Color darkPrimaryColor = const Color(0xFF1A2127);
+  static Color darkBackgroundColor = const Color(0xfff2f2f2);
+  static Color darkPrimaryColor = const Color(0xfff2f2f2);
   static Color darkAccentColor = Colors.blueGrey.shade600;
-  static Color darkParticlesColor = const Color(0x441C2A3D);
+  static Color darkParticlesColor = const Color(0x44948282);
 
   const AppTheme._();
 

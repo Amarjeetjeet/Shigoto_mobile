@@ -5,6 +5,7 @@ import 'package:shigoto/presentation/bookmark/bookmark_people.dart';
 
 import '../job_card/job_card_bookmark.dart';
 import 'bookmark_company.dart';
+import 'bookmark_job.dart';
 
 class BookMarkTabBar extends StatefulWidget{
   const BookMarkTabBar({super.key});
@@ -65,14 +66,13 @@ class _BookMarkTabBarState extends State<BookMarkTabBar> with TickerProviderStat
             controller: _tabController,
           ),
         ),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.69,
-          child: TabBarView(
+        Expanded(
+         child: TabBarView(
               controller: _tabController,
               children: <Widget>[
-                JobCardBookmark(),
+                BookMarkJob(),
+                BookmarkPeople(),
                 BookmarkCompany(),
-                BookmarkPeople()
               ]),
         )
       ],

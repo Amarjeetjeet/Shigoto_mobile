@@ -8,7 +8,7 @@ class BookmarkPeople extends StatelessWidget{
   Widget build(BuildContext context) {
     return GridView.count(
       primary: false,
-      childAspectRatio : 3/4,
+      childAspectRatio : (MediaQuery.of(context).size.width / 2 ) / (MediaQuery.of(context).size.height / 3),
       padding: const EdgeInsets.all(20),
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,

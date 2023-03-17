@@ -30,6 +30,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       style: optionStyle,
     ),
     BookMarkScreen(),
+    BookMarkScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -47,7 +48,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
         centerTitle: false,
         title: Text("Shigoto",style: AppStyle.txtDmSans16W700primaryTextColor,),
         elevation: 0,
-        actions: const [
+        actions: [
+
+          IconButton(onPressed: (){
+            _onItemTapped(5);
+          }, icon: Icon(Icons.notifications_none_sharp)),
+
           Padding(
             padding: EdgeInsets.symmetric(vertical: 4.0 , horizontal: 12),
             child: CircleAvatar(
@@ -100,12 +106,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
             icon: Icon(Icons.spoke_outlined),
             label: '',
           ),
+          // BottomNavigationBarItem(
+          //   icon: CircleAvatar(
+          //     radius: 23,
+          //     backgroundColor: ColorConstants.primaryColor,
+          //     child: Icon(Icons.add,color: Colors.white,),
+          //   ),
+          //   label: '',
+          // ),
           BottomNavigationBarItem(
-            icon: CircleAvatar(
-              radius: 23,
-              backgroundColor: ColorConstants.primaryColor,
-              child: Icon(Icons.add,color: Colors.white,),
-            ),
+            icon: Icon(Icons.manage_search_outlined),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -117,7 +127,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             label: '',
           ),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex:  _selectedIndex > 4 ? 1 : _selectedIndex,
         selectedItemColor:  ColorConstants.primaryTextColor,
         unselectedItemColor:  ColorConstants.a49EB5Color,
         onTap: _onItemTapped,

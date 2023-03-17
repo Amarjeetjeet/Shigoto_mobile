@@ -3,6 +3,8 @@ import 'package:shigoto/core/constants/app_style.dart';
 import 'package:shigoto/core/constants/color_constants.dart';
 import 'package:shigoto/core/constants/image_constants.dart';
 import 'package:shigoto/core/custom_widgets/buttons/custom_primary_Btn.dart';
+import 'package:shigoto/presentation/company_card/company_card.dart';
+import 'package:shigoto/presentation/people_card/people_card.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
@@ -10,9 +12,17 @@ class FeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        // isExtended: true,
+        child: Icon(Icons.add , color: Colors.white,),
+        backgroundColor: ColorConstants.primaryColor,
+        onPressed: () {
+
+        },
+      ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(top: 20.0 ,left: 20 , right: 20.0),
           child: ListView.separated(
             itemCount: 10,
             itemBuilder: (context, index) {
@@ -163,85 +173,23 @@ class FeedScreen extends StatelessWidget {
             },
             separatorBuilder: (BuildContext context, int index) {
               if(index == 3) {
-                return SizedBox(
-                  height: MediaQuery.of(context).size.width * 0.5,
+                return AspectRatio(
+                  aspectRatio: 5 / 3,
                   child: ListView.builder(
                       itemCount: 10,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return SizedBox(
-                          width: 160,
-                          child: Card(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 25,),
-                                CircleAvatar(
-                                  child: Image.asset(
-                                    ImageConstants.googleLogo,
-                                    width: 28,
-                                  ),
-                                  radius: 25,
-                                ),
-                                SizedBox(height: 20,),
-
-                                Text("Google Inc" ,style: AppStyle.txtDmSans14W700primaryTextColor),
-                                SizedBox(height: 6,),
-
-                                Text("1M Followers",style: AppStyle.txtDmSans12W400AAA6B9TextColor),
-                                SizedBox(height: 15,),
-
-                                OutlinedButton(
-                                    style: ElevatedButton.styleFrom(shape: StadiumBorder(),
-                                        padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 32)),
-                                    onPressed: () {}, child: Text("Follow",style: AppStyle.txtOpenSans12W400primaryTextColor))
-                              ],
-                            ),
-                          ),
-                        );
+                        return const SizedBox(width : 160 ,child: CompanyCard());
                       }),
                 );
               }   if(index == 6) {
-                return SizedBox(
-                  height: MediaQuery.of(context).size.width * 0.60,
+                return AspectRatio(
+                  aspectRatio: 4/3,
                   child: ListView.builder(
                       itemCount: 10,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return SizedBox(
-                          width: 160,
-                          child: Card(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 25,),
-                                CircleAvatar(
-                                  child: Image.asset(
-                                    ImageConstants.girlImage,
-                                    width: 28,
-                                  ),
-                                  radius: 25,
-                                ),
-                                SizedBox(height: 20,),
-
-                                Text("Hemangi B." ,style: AppStyle.txtDmSans14W700primaryTextColor),
-                                SizedBox(height: 6,),
-
-                                Text("HR. JB Solutions", overflow: TextOverflow.ellipsis,
-                                    maxLines: 1,
-                                    textAlign: TextAlign.center,style: AppStyle.txtDmSans14W600AAA60B9TextColor),
-                                Text("Hiring Node js Developers and PHP Developer",
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                    textAlign: TextAlign.center,style: AppStyle.txtDmSans12W400AAA6B9TextColor),
-                                SizedBox(height: 15,),
-
-                                OutlinedButton(
-                                    style: ElevatedButton.styleFrom(shape: StadiumBorder(),
-                                        padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 32)),
-                                    onPressed: () {}, child: Text("Connect",style: AppStyle.txtOpenSans12W400primaryTextColor))
-                              ],
-                            ),
-                          ),
-                        );
+                        return const SizedBox(width : 180 ,child: PeopleCard());
                       }),
                 );
               }else{
