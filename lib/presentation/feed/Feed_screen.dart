@@ -173,8 +173,8 @@ class FeedScreen extends StatelessWidget {
             },
             separatorBuilder: (BuildContext context, int index) {
               if(index == 3) {
-                return AspectRatio(
-                  aspectRatio: 5 / 3,
+                return SizedBox(
+                  height: 220,
                   child: ListView.builder(
                       itemCount: 10,
                       scrollDirection: Axis.horizontal,
@@ -183,8 +183,8 @@ class FeedScreen extends StatelessWidget {
                       }),
                 );
               }   if(index == 6) {
-                return AspectRatio(
-                  aspectRatio: 4/3,
+                return SizedBox(
+                  height: 250,
                   child: ListView.builder(
                       itemCount: 10,
                       scrollDirection: Axis.horizontal,

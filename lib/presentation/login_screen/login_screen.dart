@@ -80,17 +80,11 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
                 buildSizedBox(32),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                  child: PrimaryCustomButton(btnName: "Login", onTap: () {
-                    Navigator.pushNamedAndRemoveUntil(context, AppRouter.dashboard, ModalRoute.withName('/login'));
-                  },),
-                ),
+                PrimaryCustomButton(btnName: "Login", onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(context, AppRouter.dashboard, ModalRoute.withName('/login'));
+                },),
                 buildSizedBox(19),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 28.0),
-                  child: CustomSignInGoogleBtn(onTap: () {  },),
-                ),
+                CustomSignInGoogleBtn(onTap: () {  },),
                 buildSizedBox(16),
                 GestureDetector(
                   onTap: (){
@@ -107,6 +101,8 @@ class LoginScreen extends StatelessWidget {
                         )
                       ])),
                 ),
+
+                buildSizedBox(19),
               ],
             ),
           ),

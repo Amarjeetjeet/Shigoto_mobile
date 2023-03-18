@@ -32,13 +32,7 @@ class JobCard extends StatelessWidget{
                 "Product Designer",
                 style: AppStyle.txtDmSans14W700primaryTextColor,
               ),
-              subtitle: Row(
-                children: [
-                  Text("Google inc"),
-                  Text(" \u2022 "),
-                  Text("California, USA "),
-                ],
-              ),
+              subtitle: Text("Google inc \u2022  California, USA " ,),
               trailing: Icon(
                 Icons.bookmark_border_outlined,
                 color: ColorConstants.secondaryTextColor,
@@ -48,34 +42,37 @@ class JobCard extends StatelessWidget{
               padding: const EdgeInsets.only(left: 25.0 ,bottom: 5 ,top: 5),
               child: Text("\$15K/Mo",style: AppStyle.txtDmSans12W400primaryTextColor,),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Senior designer" ,style: AppStyle.txtDmSans10W400primaryTextColor,),
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorConstants.cbc9dColor,shadowColor: Colors.transparent),
-                ),
-
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Full time" ,style: AppStyle.txtDmSans10W400primaryTextColor,),
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorConstants.cbc9dColor,shadowColor: Colors.transparent),
-
-                ),
-
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text("Apply" ,style: AppStyle.txtDmSans10W400primaryTextColor,),
-                  style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(horizontal: 30),
-                      backgroundColor: ColorConstants.ff6b2cColor.withOpacity(0.2),
-                      shadowColor: Colors.transparent
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Wrap(
+                spacing: 5,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Senior designer" ,style: AppStyle.txtDmSans10W400primaryTextColor,),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: ColorConstants.cbc9dColor,shadowColor: Colors.transparent),
                   ),
-                ),
-              ],
+
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Full time" ,style: AppStyle.txtDmSans10W400primaryTextColor,),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: ColorConstants.cbc9dColor,shadowColor: Colors.transparent),
+
+                  ),
+
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Apply" ,style: AppStyle.txtDmSans10W400primaryTextColor,),
+                    style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(horizontal: 30),
+                        backgroundColor: ColorConstants.ff6b2cColor.withOpacity(0.2),
+                        shadowColor: Colors.transparent
+                    ),
+                  ),
+                ],
+              ),
             ),
 
             buildSizedBox(10)

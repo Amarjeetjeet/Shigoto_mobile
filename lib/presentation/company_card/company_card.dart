@@ -30,7 +30,9 @@ class CompanyCard extends StatelessWidget{
           OutlinedButton(
               style: ElevatedButton.styleFrom(shape: StadiumBorder(),
                   padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 32)),
-              onPressed: () {}, child: Text("Follow",style: AppStyle.txtOpenSans12W400primaryTextColor))
+              onPressed: () {}, child: Text("Follow",style: AppStyle.txtOpenSans12W400primaryTextColor)),
+
+          SizedBox(height: 15,),
         ],
       ),
     );

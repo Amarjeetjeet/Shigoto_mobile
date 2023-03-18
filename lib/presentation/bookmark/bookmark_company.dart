@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:shigoto/presentation/company_card/company_card.dart';
 
 class BookmarkCompany extends StatelessWidget{
@@ -6,21 +7,16 @@ class BookmarkCompany extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      primary: false,
-      childAspectRatio : 3/4,
-      padding: const EdgeInsets.all(20),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      crossAxisCount: 2,
-      children: <Widget>[
-        CompanyCard(),
-        CompanyCard(),
-        CompanyCard(),
-        CompanyCard(),
-        CompanyCard(),
-        CompanyCard(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: AlignedGridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 2,
+        crossAxisSpacing: 4,
+        itemBuilder: (context, index) {
+          return CompanyCard();
+        },
+      ),
     );
   }
   
