@@ -12,6 +12,7 @@ import 'package:shigoto/presentation/signup/sign_up.dart';
 
 import '../../core/exceptions/route_exception.dart';
 import '../presentation/job_description/successful.dart';
+import '../presentation/new_post/new_post_screen.dart';
 import '../presentation/splash_screen/splash_screen.dart';
 import '../presentation/splash_screen/splash_screen_two.dart';
 
@@ -29,6 +30,7 @@ class AppRouter {
   static const String companyDescription = '/companyDescription';
   static const String uploadCv = '/uploadCv';
   static const String successFulJob = '/successFulJob';
+  static const String createNewPost = '/createNewPost';
 
   const AppRouter._();
 
@@ -85,6 +87,10 @@ class AppRouter {
         case successFulJob:
         return MaterialPageRoute(
           builder: (_) => const SuccessfulJobScreen(),
+        );
+      case createNewPost:
+        return MaterialPageRoute(
+          builder: (_) => const NewPostCreate(),
         );
       default:
         throw const RouteException('Route not found!');

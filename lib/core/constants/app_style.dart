@@ -88,6 +88,14 @@ class AppStyle {
       height: 1.5
   );
 
+  static TextStyle txtDmSans12W700ff9228Color = TextStyle(
+      color: ColorConstants.ff9228Color,
+      fontSize: 12,
+      fontFamily: 'DM Sans',
+      fontWeight: FontWeight.w700,
+      height: 1.5
+  );
+
   static TextStyle txtDmSans14W700whiteColor = const TextStyle(
       color: Colors.white,
       fontSize: 14,

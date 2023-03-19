@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shigoto/core/constants/app_style.dart';
 import 'package:shigoto/core/constants/color_constants.dart';
 import 'package:shigoto/core/constants/image_constants.dart';
-import 'package:shigoto/router/app_router.dart';
 
 import '../job_card/job_card.dart';
 

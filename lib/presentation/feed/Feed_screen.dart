@@ -5,6 +5,7 @@ import 'package:shigoto/core/constants/image_constants.dart';
 import 'package:shigoto/core/custom_widgets/buttons/custom_primary_Btn.dart';
 import 'package:shigoto/presentation/company_card/company_card.dart';
 import 'package:shigoto/presentation/people_card/people_card.dart';
+import 'package:shigoto/router/app_router.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
@@ -17,6 +18,8 @@ class FeedScreen extends StatelessWidget {
         child: Icon(Icons.add , color: Colors.white,),
         backgroundColor: ColorConstants.primaryColor,
         onPressed: () {
+
+          Navigator.pushNamed(context, AppRouter.createNewPost);
 
         },
       ),
