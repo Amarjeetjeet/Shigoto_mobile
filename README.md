@@ -1,8 +1,12 @@
 # shigoto
 
+Shigoto is Social media app for Job seeker and Hirer. 
 A new Flutter project.
 
-## Getting Started
+Project is in progress.।।। 
+
+## Getting Started  
+He
 
 This project is a starting point for a Flutter application.
 
