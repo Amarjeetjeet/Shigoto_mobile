@@ -43,7 +43,7 @@ class _MaterialAppInitScreenState extends State<MaterialAppInitScreen> with Widg
       themeMode:
           context.select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRouter.splash,
+      initialRoute: AppRouter.customStag,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }

@@ -9,15 +9,17 @@ class BookmarkCompany extends StatelessWidget{
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: AlignedGridView.count(
-        crossAxisCount: 2,
-        mainAxisSpacing: 2,
-        crossAxisSpacing: 4,
-        itemBuilder: (context, index) {
-          return CompanyCard();
-        },
-      ),
+      child: CompanyCard()
     );
   }
   
 }
+
+// AlignedGridView.count(
+// crossAxisCount: 2,
+// mainAxisSpacing: 2,
+// crossAxisSpacing: 4,
+// itemBuilder: (context, index) {
+// return CompanyCard();
+// },
+// ),

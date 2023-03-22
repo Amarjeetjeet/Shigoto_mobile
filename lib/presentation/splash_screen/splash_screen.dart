@@ -10,14 +10,14 @@ class SplashScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 3),
-            ()=>Navigator.pushReplacement(context,
-            MaterialPageRoute(builder:
-                (context) =>
-                    const SplashScreenTwo()
-            )
-        )
-    );
+    // Timer(const Duration(seconds: 3),
+    //         ()=>Navigator.pushReplacement(context,
+    //         MaterialPageRoute(builder:
+    //             (context) =>
+    //                 const SplashScreenTwo()
+    //         )
+    //     )
+    // );
     return Scaffold(
       backgroundColor: ColorConstants.primaryColor,
       body: Center(

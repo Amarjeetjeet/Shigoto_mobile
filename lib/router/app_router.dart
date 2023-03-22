@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shigoto/presentation/customStag.dart';
 import 'package:shigoto/presentation/dashboard/dashboard_screen.dart';
 import 'package:shigoto/presentation/dashboard/home_screen.dart';
 import 'package:shigoto/presentation/forgot_password/check_your_email.dart';
@@ -9,8 +10,12 @@ import 'package:shigoto/presentation/job_description/job_description_screen.dart
 import 'package:shigoto/presentation/job_description/upload_cv.dart';
 import 'package:shigoto/presentation/login_screen/login_screen.dart';
 import 'package:shigoto/presentation/signup/sign_up.dart';
+import 'package:shigoto/presentation/customStag.dart';
 
 import '../../core/exceptions/route_exception.dart';
+import '../presentation/customStag.dart';
+import '../presentation/customStag.dart';
+import '../presentation/customStag.dart';
 import '../presentation/job_description/successful.dart';
 import '../presentation/new_post/new_post_screen.dart';
 import '../presentation/splash_screen/splash_screen.dart';
@@ -31,6 +36,7 @@ class AppRouter {
   static const String uploadCv = '/uploadCv';
   static const String successFulJob = '/successFulJob';
   static const String createNewPost = '/createNewPost';
+  static const String customStag = '/customStag';
 
   const AppRouter._();
 
@@ -91,6 +97,10 @@ class AppRouter {
       case createNewPost:
         return MaterialPageRoute(
           builder: (_) => const NewPostCreate(),
+        );
+      case customStag:
+        return MaterialPageRoute(
+          builder: (_) => const CustomStag(),
         );
       default:
         throw const RouteException('Route not found!');
