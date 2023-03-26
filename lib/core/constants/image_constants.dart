@@ -9,4 +9,8 @@ class ImageConstants {
   static const girlImage = 'assets/images/girl.png';
   static const remoteJob = 'assets/images/remote_job.png';
   static const apple = 'assets/images/apple.png';
+  static const emptyMessage = 'assets/images/empty_message.png';
+  static const noSearchFound = 'assets/images/no_search_found.png';
+  static const noSavingFound = 'assets/images/no_saving_found.png';
+  static const noNotificationFound = 'assets/images/no_notifications_found.png';
 }

@@ -131,6 +131,13 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
+  static TextStyle txtDmSans16W500primaryTextColor = TextStyle(
+    color: ColorConstants.primaryTextColor,
+    fontSize: 16,
+    fontFamily: 'DM Sans',
+    fontWeight: FontWeight.w500,
+  );
+
   static TextStyle txtDmSans12W400primaryTextColorA60 = TextStyle(
       color: ColorConstants.primaryTextColor.withOpacity(0.6),
       fontSize: 12,

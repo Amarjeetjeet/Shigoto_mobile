@@ -5,7 +5,11 @@ import 'package:shigoto/presentation/bookmark/bookmark_screen.dart';
 import 'package:shigoto/presentation/dashboard/home_screen.dart';
 
 import '../../core/constants/image_constants.dart';
+import '../error_widget_or_empty_widget/no_notification.dart';
+import '../error_widget_or_empty_widget/no_saving_found.dart';
 import '../feed/Feed_screen.dart';
+import '../error_widget_or_empty_widget/empty_message_box.dart';
+import '../setting/setting.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -21,14 +25,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     FeedScreen(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    Setting(),
+    NoNotificationFound(),
     BookMarkScreen(),
     BookMarkScreen(),
   ];
@@ -44,7 +42,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: ColorConstants.primaryColor),
-        backgroundColor: Colors.white.withOpacity(0.1),
+        backgroundColor: ColorConstants.offWhiteColor,
         centerTitle: false,
         title: Text("Shigoto",style: AppStyle.txtDmSans16W700primaryTextColor,),
         elevation: 0,
@@ -98,40 +96,28 @@ class _DashboardScreenState extends State<DashboardScreen> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.spoke_outlined),
-            label: '',
-          ),
-          // BottomNavigationBarItem(
-          //   icon: CircleAvatar(
-          //     radius: 23,
-          //     backgroundColor: ColorConstants.primaryColor,
-          //     child: Icon(Icons.add,color: Colors.white,),
-          //   ),
-          //   label: '',
-          // ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.manage_search_outlined),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.messenger_outline),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark_border_outlined),
-            label: '',
-          ),
+          buildBottomNavigationBarItem(Icons.home_outlined),
+          buildBottomNavigationBarItem(Icons.spoke_outlined),
+          buildBottomNavigationBarItem(Icons.manage_search_outlined),
+          buildBottomNavigationBarItem(Icons.messenger_outline),
+          buildBottomNavigationBarItem(Icons.bookmark_border_outlined),
         ],
         currentIndex:  _selectedIndex > 4 ? 1 : _selectedIndex,
         selectedItemColor:  ColorConstants.primaryTextColor,
         unselectedItemColor:  ColorConstants.a49EB5Color,
+        type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
       ),
     );
+  }
+
+  BottomNavigationBarItem buildBottomNavigationBarItem(IconData data) {
+    return BottomNavigationBarItem(
+          icon: Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Icon(data),
+          ),
+          label: '',
+        );
   }
 }

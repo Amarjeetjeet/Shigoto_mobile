@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:shigoto/core/constants/app_style.dart';
+import 'package:shigoto/core/constants/color_constants.dart';
 
 class AppTheme {
   static Color lightBackgroundColor = const Color(0xfff2f2f2);
@@ -20,6 +21,8 @@ class AppTheme {
     brightness: Brightness.light,
     fontFamily: "DM Sans , Source Sans Pro",
     primaryColor: lightPrimaryColor,
+    useMaterial3: true,
+    scaffoldBackgroundColor:ColorConstants.offWhiteColor ,
     accentColor: lightAccentColor,
     backgroundColor: lightBackgroundColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
