@@ -11,6 +11,7 @@ import 'package:shigoto/presentation/job_description/upload_cv.dart';
 import 'package:shigoto/presentation/login_screen/login_screen.dart';
 import 'package:shigoto/presentation/signup/sign_up.dart';
 import 'package:shigoto/presentation/customStag.dart';
+import 'package:shigoto/presentation/update_password/update_password.dart';
 
 import '../../core/exceptions/route_exception.dart';
 import '../presentation/customStag.dart';
@@ -37,6 +38,7 @@ class AppRouter {
   static const String successFulJob = '/successFulJob';
   static const String createNewPost = '/createNewPost';
   static const String customStag = '/customStag';
+  static const String updatePassword = '/updatePassword';
 
   const AppRouter._();
 
@@ -101,6 +103,10 @@ class AppRouter {
       case customStag:
         return MaterialPageRoute(
           builder: (_) => const CustomStag(),
+        );
+        case updatePassword:
+        return MaterialPageRoute(
+          builder: (_) => const UpdatePasswordView(),
         );
       default:
         throw const RouteException('Route not found!');
